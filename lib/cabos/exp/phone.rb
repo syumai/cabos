@@ -1,6 +1,5 @@
 module Cabos::Exp
-  module Phone
-    include ::Cabos::Base
+  class Phone < ::Cabos::Base
     config.phone.country = 'US'
     label :phone
     test do |country|

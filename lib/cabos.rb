@@ -5,11 +5,13 @@ module Cabos
     def expressions
       Exp.constants.map{|exp| Exp.const_get(exp)}
     end
+
     def patch
       expressions.each do |exp|
         exp.apply
       end
     end
+
     def config
       @config ||= ChainableHash.new
     end

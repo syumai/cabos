@@ -1,6 +1,5 @@
 module Cabos::Exp
-  module Email
-    include ::Cabos::Base
+  class Email < ::Cabos::Base
     label :email
     regexp /\A[^@\s]+@[^@\s]+\z/
   end
